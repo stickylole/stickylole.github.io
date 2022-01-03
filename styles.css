@@ -1,0 +1,51 @@
+body {
+    background-color: black;
+    /* dark blue: #000133; */
+    overflow-y: hidden;
+}
+.text {
+    /* centering using flexbox
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    font-size: 66px;
+    color: white;
+    font-family: "Courier New", monospace;
+    overflow: hidden; */
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-right: 4px solid white;
+    font-size: 366%;
+    white-space: nowrap;
+    overflow: hidden;
+    color: white;
+    font-family: "Courier New", monospace;
+    line-height: 0;
+}
+.animation{
+    animation: typewriter 2.5s steps(8) 1s 1 normal both,
+    blinkCursor 530ms steps(8) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 282px;
+    }
+}
+
+@keyframes blinkCursor{
+    from {
+        border-right-color: white;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
